@@ -13,11 +13,11 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * User: 吴海旭
- * Date: 2016-11-06
- * Time: 下午6:44
+ * Date: 2016-11-09
+ * Time: 下午6:50
  */
-@WebServlet(name = "asyncServlet3", value = "/async3", asyncSupported = true)
-public class AsyncServlet3 extends HttpServlet {
+@WebServlet(name = "asyncServlet4", value = "/async4", asyncSupported = true)
+public class AsyncServlet4 extends HttpServlet {
 
     private final Queue<AsyncContext> queue = new ConcurrentLinkedQueue<>();
 
@@ -41,14 +41,14 @@ public class AsyncServlet3 extends HttpServlet {
                             ServletResponse response = asyncContext.getResponse();
                             PrintWriter out = response.getWriter();
                             String msg = "new msg: " + System.currentTimeMillis();
-                            out.write("<script>parent.callback('" + msg + "');</script>");
+                            out.write(msg);
                             try {
                                 response.flushBuffer();
                             } catch (Exception e) {
                                 // 远程主机可能强制关闭一个连接,直接把连接移除
-                                iterator.remove();
-                                asyncContext.complete();
+                                System.out.println("远程主机可能强制关闭一个连接,直接把连接移除" + e);
                             }
+                            asyncContext.complete();
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
