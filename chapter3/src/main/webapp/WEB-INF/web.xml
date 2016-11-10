@@ -7,5 +7,8 @@
         version="3.0"
         metadata-complete="false"
 >
-
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error-handler</location>
+    </error-page>
 </web-app>
