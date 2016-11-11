@@ -17,7 +17,17 @@
         <module>chapter2-initializer-handler</module>
         <module>chapter2-springmvc</module>
         <module>chapter3</module>
+        <module>chapter3-springmvc</module>
     </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jdk.version>1.7</jdk.version>
+        <jetty.maven.version>9.0.4.v20130625</jetty.maven.version>
+        <tomcat.maven.version>2.1</tomcat.maven.version>
+        <spring.version>4.2.6.RELEASE</spring.version>
+        <jackson.version>2.8.4</jackson.version>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
@@ -51,15 +61,55 @@
                 <artifactId>jstl</artifactId>
                 <version>1.2</version>
             </dependency>
+
+            <!-- spring相关jar包 -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <!-- spring webmvc相关jar包 -->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-web</artifactId>
-                <version>4.2.6.RELEASE</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
-                <version>4.2.6.RELEASE</version>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -101,12 +151,5 @@
 
         </plugins>
     </build>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jdk.version>1.7</jdk.version>
-        <jetty.maven.version>9.0.4.v20130625</jetty.maven.version>
-        <tomcat.maven.version>2.1</tomcat.maven.version>
-    </properties>
 
 </project>
