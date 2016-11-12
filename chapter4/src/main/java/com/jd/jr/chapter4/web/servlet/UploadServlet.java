@@ -103,7 +103,7 @@ public class UploadServlet extends HttpServlet {
         if(StringUtils.isEmpty(contentDisposition)) {
             return null;
         }
-        //如 form-data; name="file1"; filename="TODO.txt"
+        //如 form-data; name="file1"; filename="to.txt"
         return StringUtils.substringBetween(contentDisposition, "filename=\"", "\"");
 
     }
