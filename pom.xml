@@ -21,6 +21,8 @@
         <module>chapter4</module>
         <module>chapter4-resource</module>
         <module>chapter4-3.1</module>
+        <module>chapter5-pjax</module>
+        <module>chapter5-bigpipe</module>
     </modules>
 
     <properties>
