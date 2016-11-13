@@ -65,12 +65,13 @@ https://imququ.com/post/transfer-encoding-header-in-http.html#simple_thread
 ###chapter4-resource
 [http://www.blogjava.net/yongboy/archive/2011/01/03/346208.html](http://www.blogjava.net/yongboy/archive/2011/01/03/346208.html)
 
-tomcat7支持servlet3.0
-tomcat8支持servlet3.1
-tomcat9支持servlet4.0
-所以使用tomcat8来运行项目吧
+tomcat7支持servlet3.0  
+tomcat8支持servlet3.1  
+tomcat9支持servlet4.0  
+所以使用tomcat8来运行项目吧  
+
+另外pushState学习网址:http://www.zhangxinxu.com/wordpress/2013/06/html5-history-api-pushstate-replacestate-ajax/  
+
+pjax可以到github上搜  
+
 最后感谢jinnianshilongnian给的demo学习
-
-另外pushState学习网址:http://www.zhangxinxu.com/wordpress/2013/06/html5-history-api-pushstate-replacestate-ajax/
-
-pjax可以到github上搜
