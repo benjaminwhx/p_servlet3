@@ -70,3 +70,7 @@ tomcat8支持servlet3.1
 tomcat9支持servlet4.0
 所以使用tomcat8来运行项目吧
 最后感谢jinnianshilongnian给的demo学习
+
+另外pushState学习网址:http://www.zhangxinxu.com/wordpress/2013/06/html5-history-api-pushstate-replacestate-ajax/
+
+pjax可以到github上搜
